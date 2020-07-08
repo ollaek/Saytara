@@ -4,18 +4,20 @@ import { Provider } from 'react-redux'
 import { combineReducers, createStore } from 'redux';
 
 import Shell from './components/Shell';
-import { authReducer } from './reducers';
+import { authReducer, taskReducer } from './reducers';
 import * as serviceWorker from './serviceWorker';
-import { TAuthState } from './types';
+import { TAuthState, TTasksState } from './types';
 
 import './index.css';
 
 export type TGlobalState = {
-    authModule: TAuthState
+    authModule: TAuthState,
+    tasksModule: TTasksState,
 };
 
 const rootReducer = combineReducers({
-    authModule: authReducer
+    authModule: authReducer,
+    tasksModule: taskReducer
 });
 
 const store = createStore(rootReducer);

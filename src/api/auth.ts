@@ -1,10 +1,10 @@
-import authBase from "./authBase";
+import Base from "./base";
 
 import {} from "../types";
 
 const authApi = {
   SignIn: (user: any) =>
-    authBase
+    Base
       .post("account/AffiliateLogin", {
         Email: user.Email,
         Password: user.Password

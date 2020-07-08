@@ -2,7 +2,8 @@ import React, { lazy, Suspense } from 'react';
 import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 const Dashboard = lazy(() => import('./Dashboard/Dashboard'));
-const Tasks = lazy(() => import('./Tasks/Tasks'));
+const TasksLibrary = lazy(() => import('./Tasks/Library/Library'));
+const TaskCreate = lazy(() => import('./Tasks/Create/CreateTask'));
 const SignIn = lazy(() => import('./SignIn/SignIn'));
 
 const Shell = () => (
@@ -10,7 +11,8 @@ const Shell = () => (
         <Suspense fallback={<div className="loading"></div>}>
             <Switch>
                 <Route path='/Dashboard' component={Dashboard} />
-                <Route path='/Tasks' component={Tasks} />
+                <Route path='/TasksLibrary' component={TasksLibrary} />
+                <Route path='/TaskCreate' component={TaskCreate} />
                 <Route path='/SignIn' component={SignIn} />
                 <Redirect to='/Dashboard' />
             </Switch>

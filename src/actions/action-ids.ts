@@ -1,5 +1,10 @@
 const actionIds = {
-    AUTH_SIGN_IN : '[AUTH] SIGN IN'
+    AUTH_SIGN_IN : '[AUTH] SIGN IN',
+    RESET_STATE : '[RESET] STATE',
+    TASKS_GET : '[TASKS] GET ALL TASKS',
+    TASKS_POST : '[TASKS] POST NEW TASK',
+    TASKS_CATEGORIES_GET : '[TASKS CATEGORIES] GET ALL',
+    TASKS_TYPES_GET : '[TASKS TYPES] GET ALL',
 };
 
 export default actionIds;
